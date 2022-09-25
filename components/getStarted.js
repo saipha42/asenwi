@@ -31,9 +31,9 @@ function GetStarted() {
             What will be the next step?
           </h3>
           <ul className="cta-info__list">
-            <li>We'll prepare the proposal.</li>
-            <li>we'll discuss it together.</li>
-            <li>let's start the discussion.</li>
+            <li>{"We'll"} prepare the proposal.</li>
+            <li>{"we'll "}discuss it together.</li>
+            <li>{"let's"} start the discussion.</li>
           </ul>
         </div>
       </div>
