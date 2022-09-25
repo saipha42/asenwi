@@ -1,0 +1,23 @@
+import '../styles/globals.css'
+import 'styles/css/style.css';
+import '@fortawesome/fontawesome-free/css/all.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'styles/google-font.css'
+
+
+import Navbar from 'components/navbar';
+
+
+function MyApp({ Component, pageProps }) {
+
+  return <>
+  <Navbar/>
+
+  <div>
+  <Component {...pageProps} />
+  </div>
+
+  </>
+}
+
+export default MyApp;

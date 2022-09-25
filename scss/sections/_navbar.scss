@@ -1,0 +1,64 @@
+@use '../component/mixin' as *;
+@use '../custom' as *;
+.menu {
+    
+    @include bg-linear-gridient();
+    li {
+        padding: 0.5rem;
+        a {
+            color: white!important;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+    }
+    .navbar-collapse{
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+    
+
+}
+.show-menu {
+    clip-path: circle(200% at 100% 0%)!important;
+}
+
+.mobile-nav {
+    @include bg-linear-gridient(1,1);
+    width: 100vw;
+    height: 100vh;
+    padding-top: 4.5rem;
+    z-index: 1;
+    clip-path: circle(10% at 110% -20%);
+    transition: clip-path 1s;
+    position: fixed;
+    .mobile-nav-menu {
+        ul {
+            padding-top: 2.5rem;
+            li {
+                padding: 0.2rem;
+                a{
+                    color: white!important;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+}
+
+.bi {
+    transition: all 0.5s;
+}
+.bi-list {
+    font-size: 2rem;
+    font-weight:bolder
+}
+
+.bi-x{
+    font-size: 2rem;
+    font-weight:bolder
+}
+
