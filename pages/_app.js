@@ -1,5 +1,5 @@
 // import '../styles/globals.css'
-import 'styles/css/style.css';
+import 'styles/css/dist/style.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import '@fortawesome/fontawesome-free/css/brands.min.css';
 import '@fortawesome/fontawesome-free/css/regular.min.css';
