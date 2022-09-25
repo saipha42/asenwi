@@ -37,7 +37,7 @@ function Intro() {
   
       <div className="col-md-6 intros text-end">
         <div className="video-box">
-          <Image src={IntroImage}  className="img-fluid" alt="Art svg"   />
+          <Image src={IntroImage}  className="img-fluid" alt="Art svg"  width={500} height={500} />
           <a href="#"  className="glightbox position-absolute top-50 start-50 translate-middle">
             <span>
               <i className="fas fa-play-circle"></i>
