@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "compile:sass": "sass --watch scss:styles/css --load-path=node_modules/",
-    "purge:css":"purgecss --css styles/css/style.css --content components/*.js --output styles/css/dist"
+    "purge:css": "purgecss --css styles/css/style.css --content components/*.js --output styles/css/dist --config postcss.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
@@ -22,7 +22,8 @@
     "postcss-preset-env": "^7.8.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.55.0"
+    "sass": "^1.55.0",
+    "sharp": "^0.31.0"
   },
   "devDependencies": {
     "eslint": "8.23.1",

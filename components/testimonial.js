@@ -1,6 +1,7 @@
 import React,{ useState} from 'react'
-import Script from 'next/script'
 import Image from 'next/image';
+import Dycar from './dyanmic-import'
+
 function Testimonial() {
     let clientData=[
         {
@@ -24,9 +25,8 @@ function Testimonial() {
 
   return (
     <section className="testimonials ">
-        <Script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        />
+     
+        <Dycar/>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="1" d="M0,64L30,96C60,128,120,192,180,208C240,224,300,192,360,165.3C420,139,480,117,540,122.7C600,128,660,160,720,192C780,224,840,256,900,245.3C960,235,1020,181,1080,160C1140,139,1200,149,1260,170.7C1320,192,1380,224,1410,240L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
   <div className="container">
     <div className="row text-center text-white">

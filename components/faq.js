@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import {Collapse} from './dyanmic-import'
 function Faq() {
     const featuresData=[
         {
@@ -22,6 +22,7 @@ function Faq() {
     const [features,setFeatures] = useState(featuresData);
   return (
     <section id="faq" className="faq">
+      <Collapse/>
   <div className="container">
     <div className="text-center">
       <h1 className="display-3 fw-bold text-uppercase">faq</h1>

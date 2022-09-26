@@ -21,7 +21,6 @@ function Intro() {
 />   
   <div className="container">
     <div className="row align-items-center text-white">
-
       <div className="col-md-6 intros">
         <h1 className="display-2">
           <span className="display-2--intro">Hey! I am Sai Marn Pha</span>
@@ -37,7 +36,7 @@ function Intro() {
   
       <div className="col-md-6 intros text-end">
         <div className="video-box">
-          <Image src={IntroImage}  className="img-fluid" alt="Art svg"  width={500} height={500} />
+          <Image src={IntroImage}  className="img-fluid" alt="Art svg" />
           <a href="#"  className="glightbox position-absolute top-50 start-50 translate-middle">
             <span>
               <i className="fas fa-play-circle"></i>
