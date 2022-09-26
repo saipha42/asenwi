@@ -2,27 +2,8 @@ import React,{ useState} from 'react'
 import Image from 'next/image';
 import Dycar from './dyanmic-import'
 
-function Testimonial() {
-    let clientData=[
-        {
-            'body':" Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos similique sunt quaerat veritatis iste nam molestiae, nihil adipisci nemo corrupti aliquam praesentium doloremque laudantium dolorem consectetur eos, eius est?",
-            'position':"CEO & Founder",
-            "name":"Patrick Muriungi"
-        },
-        {
-            'body':" Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos similique sunt quaerat veritatis iste nam molestiae, nihil adipisci nemo corrupti aliquam praesentium doloremque laudantium dolorem consectetur eos, eius est?",
-            'position':"Finance Manager",
-            "name":"Joy Marete"
-
-        },
-        {
-            'body':" Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dignissimos similique sunt quaerat veritatis iste nam molestiae, nihil adipisci nemo corrupti aliquam praesentium doloremque laudantium dolorem consectetur eos, eius est?",
-            'position':"Global Brand Manager",
-            "name":'ClaireBelle Zawadi'
-        }
-    ];
-    const [clients,setClients]= useState(clientData);
-
+function Testimonial({testimonials}) {
+  testimonials= JSON.parse(testimonials)
   return (
     <section className="testimonials ">
      
@@ -42,13 +23,13 @@ function Testimonial() {
         
         <div className="carousel-inner">
             {
-               clients.map((client,index)=>{
+             testimonials && testimonials.map((testimonial,index)=>{
                     return(
-                        <div className={`carousel-item ${index == 0 ? 'active' : ''}`}  key={index+client.position}>
+                        <div className={`carousel-item ${index == 0 ? 'active' : ''}`}  key={index+testimonial.position}>
                         <div className="testimonials__card">
                           <p className="lh-lg">
                             <i className="fa-solid fa-quote-left"></i>
-                            {client.body}
+                            {testimonial.review}
                             <i className="fa-solid fa-quote-right"></i>
                             <span className="ratings">
                               <i className="fas fa-star"></i>
@@ -64,8 +45,8 @@ function Testimonial() {
                         </div>
                         {/* <!-- Client  name --> */}
                         <div className="testimonials__name">
-                          <h3>{client.name}</h3>
-                          <p className="lead fw-light">{client.position}</p>
+                          <h3>{testimonial.name}</h3>
+                          <p className="lead fw-light">{testimonial.position}</p>
                         </div>
                     </div>
                     )
