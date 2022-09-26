@@ -23,7 +23,7 @@ module.exports = {
           css:['./styles/css/style.css'],
           defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
           safelist: {
-            standard: [/accordion/,/transition/,/collap/,/transform/]
+            standard: [/accordion/,/transition/,/collap/,/transform/,/carousel/]
           }
         }
       ],

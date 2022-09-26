@@ -6,50 +6,24 @@ import Intro from "components/intro";
 import Portfolio from "components/portfolio";
 import Service from "components/service";
 import Testimonial from "components/testimonial";
-import {connectToDb} from '../lib/connectdb'
+
 import Head from "next/head";
-export default function Home({testimonials}) {
+export default function Home() {
 
   return (
     <>
     <Head>
       <title>Sai Marn Pha portfolio</title>
-      <meta name="description" content={`Sai Marn Pha, Software Engineering, ${testimonials}`} />
+      <meta name="description" content="Sai Marn Pha, Software Engineering" />
     </Head>
     <Intro/>
     <Company/>
     <Service/>
-    <Testimonial testimonials={testimonials} />
+    <Testimonial  />
     <Faq/>
     <Portfolio/>
     <GetStarted/>
     <Footer/>
     </>
   )
-}
-
-export async function getStaticProps(context) {
-  let testimonials;
-  try{
-    const {mongoClient} = await connectToDb();
-    const db = mongoClient.db('vercel-integrate');
-    const collection = db.collection('testimonial');
-    const res  = await collection.find({}).toArray();
-    testimonials=JSON.stringify(res);
-
-  }catch(e){
-      console.log('Connection error: on api ', e)
-      return {
-        props:{
-          error:"Fetching data error",
-          testimonials:[]
-        }
-      }
-  }
-  return {
-    props: {
-      testimonials
-    },
-    revalidate: 3600
-  }
 }

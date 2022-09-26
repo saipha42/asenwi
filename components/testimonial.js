@@ -1,13 +1,21 @@
-import React,{ useState} from 'react'
+import React,{ useState, useEffect} from 'react'
 import Image from 'next/image';
 import Dycar from './dyanmic-import'
 
-function Testimonial({testimonials}) {
-  testimonials= JSON.parse(testimonials)
+function Testimonial() {
+  const [testimos,setTestimos]= useState([]);
+  const getTestimos= async ()=>{
+    let res= await fetch('/api/testimonials');
+    res= await res.json();
+    setTestimos(res)
+  }
+  useEffect(()=>{
+    getTestimos();
+  },[]);
   return (
     <section className="testimonials ">
      
-        <Dycar/>
+        
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fillOpacity="1" d="M0,64L30,96C60,128,120,192,180,208C240,224,300,192,360,165.3C420,139,480,117,540,122.7C600,128,660,160,720,192C780,224,840,256,900,245.3C960,235,1020,181,1080,160C1140,139,1200,149,1260,170.7C1320,192,1380,224,1410,240L1440,256L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path></svg>
   <div className="container">
     <div className="row text-center text-white">
@@ -23,7 +31,7 @@ function Testimonial({testimonials}) {
         
         <div className="carousel-inner">
             {
-             testimonials && testimonials.map((testimonial,index)=>{
+             testimos.map((testimonial,index)=>{
                     return(
                         <div className={`carousel-item ${index == 0 ? 'active' : ''}`}  key={index+testimonial.position}>
                         <div className="testimonials__card">
@@ -53,6 +61,7 @@ function Testimonial({testimonials}) {
                 })
             }
       </div>
+      <Dycar/>
     <button type="button" className="btn btn-outline-light fas fa-arrow-left mx-1"  data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"></button>
     <button type="button" className="btn btn-outline-light fas fa-arrow-right mx-1"  data-bs-target="#carouselExampleCaptions" data-bs-slide="next"></button>
       </div>
