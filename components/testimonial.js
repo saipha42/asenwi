@@ -2,16 +2,17 @@ import React,{ useState, useEffect} from 'react'
 import Image from 'next/image';
 import Dycar from './dyanmic-import'
 
-function Testimonial() {
-  const [testimos,setTestimos]= useState([]);
-  const getTestimos= async ()=>{
-    let res= await fetch('/api/testimonials');
-    res= await res.json();
-    setTestimos(res)
-  }
-  useEffect(()=>{
-    getTestimos();
-  },[]);
+function Testimonial({testimos}) {
+  testimos= JSON.parse(testimos)
+  //const [testimos,setTestimos]= useState([]);
+  // const getTestimos= async ()=>{
+  //   let res= await fetch('/api/testimonials');
+  //   res= await res.json();
+  //   setTestimos(res)
+  // }
+  // useEffect(()=>{
+  //   se
+  // },[]);
   return (
     <section className="testimonials ">
      
