@@ -35,7 +35,7 @@ function Navbar() {
             <a className="navbar-brand" href="#">
                 <Image src={logoImg} alt="logo" />
             </a>
-            <button id="navbar-toggler" className="navbar-toggler navbar-toggler-button nav-link-mobile-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbarNav" className="navbar-toggler navbar-toggler-button nav-link-mobile-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" className="bi bi-list"></i>
             </button>
             <div className=" navbar-collapse justify-content-end" id="navbarNav">

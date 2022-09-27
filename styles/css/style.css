@@ -8245,11 +8245,6 @@ textarea.form-control-lg {
   text-transform: capitalize;
   font-weight: 700;
 }
-@media (max-width: 991.98px) {
-  .menu .navbar-collapse {
-    display: none;
-  }
-}
 
 .show-menu {
   clip-path: circle(200% at 100% 0%) !important;
