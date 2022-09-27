@@ -10,7 +10,7 @@ function Intro() {
 <section className="intro-section" id='section-home'>
 <Script 
     src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
-    onLoad={()=>{
+    onReady={()=>{
         GLightbox({
             'href': 'https://youtu.be/eQIbuDVXZHA',
             'type': 'video',
