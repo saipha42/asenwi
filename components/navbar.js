@@ -38,15 +38,15 @@ function Navbar() {
             <button id="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbarNav" className="navbar-toggler navbar-toggler-button nav-link-mobile-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" className="bi bi-list"></i>
             </button>
-            <div className=" navbar-collapse justify-content-end" id="navbarNav">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="navbar-nav">
                 <li className="nav-item"  >
                     <a className="nav-link active"
                     aria-current="page" href="#section-home">Home</a>
                 </li>
 
-                <li className="nav-item">
-                    <a className="nav-link" href="#section-service">Services</a>
+                <li className="nav-item" >
+                    <a href="#section-service" className="nav-link" >Services</a>
                 </li>
 
                 <li className="nav-item">
@@ -71,7 +71,7 @@ function Navbar() {
             </div>
             </div>
         </nav>
-        <MobileNavBar  />
+        {/* <MobileNavBar  /> */}
     </>
   )
 }
