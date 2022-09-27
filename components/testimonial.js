@@ -28,7 +28,7 @@ function Testimonial({testimos}) {
   {/* <!-- Start of carousel --> */}
   <div className="container">
     <div className="row align-items-center text-center">
-      <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
         
         <div className="carousel-inner">
             {
