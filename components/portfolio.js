@@ -7,7 +7,7 @@ function Portfolio() {
         "All", "Website","Design","Mockup"
     ])
   return (
-    <section className="portfolio">
+    <section className="portfolio" id='section-portfolio'>
   <div className="container">
     <div className="row text-center mt-5">
       <h1 className="display-3 fw-bold text-capitalize">

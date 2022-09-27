@@ -7,7 +7,7 @@ import 'glightbox/dist/css/glightbox.min.css';
 function Intro() {
     
   return (
-<section className="intro-section">
+<section className="intro-section" id='section-home'>
 <Script 
     src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
     onLoad={()=>{

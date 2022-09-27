@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Service() {
   return (
-    <section className="services">
+    <section className="services" id='section-service'>
   <div className="container">
     <div className="row text-center">
       <h1 className="display-3 fw-bold mb-3">Our Services</h1>

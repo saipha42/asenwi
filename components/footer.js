@@ -6,7 +6,7 @@ function Footer() {
     height:2
   }
   return (
-    <footer className="footer">
+    <footer className="footer"id='section-contact'>
   <div className="container">
     <div className="row">
       {/* <!-- Frist --> */}
