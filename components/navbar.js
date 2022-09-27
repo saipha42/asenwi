@@ -6,24 +6,24 @@ import MobileNavBar from './mobileNavbar';
 function Navbar() {
 
 
-    useEffect(()=>{
-        var nav=  document.getElementById('mobile-nav');
-        let navicon = document.getElementById('navbar-toggler-icon');
-        let body = document.querySelector('body');
-        const togglerNavs = document.querySelectorAll('.nav-link-mobile-toggler');
+    // useEffect(()=>{
+    //     var nav=  document.getElementById('mobile-nav');
+    //     let navicon = document.getElementById('navbar-toggler-icon');
+        
+    //     const togglerNavs = document.querySelectorAll('.nav-link-mobile-toggler');
 
-        function toggleNavBar(){
-            nav.classList.toggle('show-menu')
-            navicon.classList.toggle('bi-list');
-            navicon.classList.toggle('bi-x');
-            body.classList.toggle('stop-scroll');
-        }
-        togglerNavs.forEach((toggleNav)=>{
-            toggleNav.addEventListener('click',()=>{
-                toggleNavBar();
-            })
-        })
-    },[])
+    //     function toggleNavBar(){
+    //         nav.classList.toggle('show-menu')
+    //         navicon.classList.toggle('bi-list');
+    //         navicon.classList.toggle('bi-x');
+            
+    //     }
+    //     togglerNavs.forEach((toggleNav)=>{
+    //         toggleNav.addEventListener('click',()=>{
+    //             toggleNavBar();
+    //         })
+    //     })
+    // },[])
 
     
 
