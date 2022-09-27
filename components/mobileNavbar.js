@@ -8,22 +8,22 @@ function MobileNavBar({toggleNavBar}) {
             <div  className="mobile-nav-menu">
             <ul className="navbar-nav">
                 <li className="nav-item">
-                <a className="nav-link" aria-current="page" onClick={toggleNavBar} href="#section-home">Home</a>
+                <a  className="nav-link nav-link-mobile-toggler" aria-current="page" href="#section-home">Home</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" onClick={toggleNavBar} href="#section-service">Services</a>
+                <a className="nav-link nav-link-mobile-toggler"  href="#section-service">Services</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" onClick={toggleNavBar} href="#section-testimonial">Testimonials</a>
+                <a className="nav-link nav-link-mobile-toggler"  href="#section-testimonial">Testimonials</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link " onClick={toggleNavBar} href='#section-faq'>Faq</a>
+                <a className="nav-link nav-link-mobile-toggler" href='#section-faq'>Faq</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" onClick={toggleNavBar} href="#section-portfolio" >Portfolio</a>
+                <a className="nav-link nav-link-mobile-toggler"  href="#section-portfolio" >Portfolio</a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link " onClick={toggleNavBar} href='#section-contact'>Contact</a>
+                <a className="nav-link nav-link-mobile-toggler"  href='#section-contact'>Contact</a>
                 </li>
             </ul>
             </div>

@@ -6,15 +6,25 @@ import MobileNavBar from './mobileNavbar';
 function Navbar() {
 
 
-    function toggleNavBar(){
-        let nav=  document.getElementById('mobile-nav');
+    useEffect(()=>{
+        var nav=  document.getElementById('mobile-nav');
         let navicon = document.getElementById('navbar-toggler-icon');
         let body = document.querySelector('body');
-        nav.classList.toggle('show-menu')
-        navicon.classList.toggle('bi-list');
-        navicon.classList.toggle('bi-x');
-        body.classList.toggle('stop-scroll')
-  }
+        const togglerNavs = document.querySelectorAll('.nav-link-mobile-toggler');
+
+        function toggleNavBar(){
+            nav.classList.toggle('show-menu')
+            navicon.classList.toggle('bi-list');
+            navicon.classList.toggle('bi-x');
+            body.classList.toggle('stop-scroll');
+        }
+        togglerNavs.forEach((toggleNav)=>{
+            toggleNav.addEventListener('click',()=>{
+                toggleNavBar();
+            })
+        })
+    },[])
+
     
 
 
@@ -25,7 +35,7 @@ function Navbar() {
             <a className="navbar-brand" href="#">
                 <Image src={logoImg} alt="logo" />
             </a>
-            <button id="navbar-toggler" className="navbar-toggler navbar-toggler-button" type="button" onClick={toggleNavBar} aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="navbar-toggler" className="navbar-toggler navbar-toggler-button nav-link-mobile-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" className="bi bi-list"></i>
             </button>
             <div className=" navbar-collapse justify-content-end" id="navbarNav">
@@ -61,7 +71,7 @@ function Navbar() {
             </div>
             </div>
         </nav>
-        <MobileNavBar toggleNavBar={toggleNavBar} />
+        <MobileNavBar  />
     </>
   )
 }
