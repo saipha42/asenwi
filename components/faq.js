@@ -21,7 +21,7 @@ function Faq() {
     ]
     const [features,setFeatures] = useState(featuresData);
   return (
-    <section id="faq" className="faq">
+    <section id="section-faq" className="faq" >
       <Collapse/>
   <div className="container">
     <div className="text-center">

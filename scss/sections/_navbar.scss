@@ -21,17 +21,21 @@
 }
 .show-menu {
     clip-path: circle(200% at 100% 0%)!important;
+    
 }
 
 .mobile-nav {
     @include bg-linear-gridient(1,1);
+    position: fixed!important;
+    top: 0px!important;
+    bottom:0px;
     width: 100vw;
     height: 100vh;
-    padding-top: 4.5rem;
+    padding-top: 2.8rem;
     z-index: 1;
     clip-path: circle(10% at 110% -20%);
     transition: clip-path 0.5s;
-    position: fixed;
+
     .mobile-nav-menu {
         ul {
             padding-top: 2.5rem;
@@ -62,3 +66,11 @@
     font-weight:bolder
 }
 
+.navbar-toggler-button{
+    z-index: 1000;
+}
+
+.stop-scroll{
+    height: 100vh;
+    overflow: hidden;
+}

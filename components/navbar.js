@@ -1,26 +1,23 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Image from 'next/image';
 import logoImg from 'public/images/logo.png';
 import MobileNavBar from './mobileNavbar';
 
 function Navbar() {
-    function collapse(){
+
+
+    function toggleNavBar(){
         let nav=  document.getElementById('mobile-nav');
         let navicon = document.getElementById('navbar-toggler-icon');
-  
-        if(nav.classList.contains('show-menu')){
-          //on close menu
-          nav.classList.remove('show-menu');
-          navicon.classList.remove('bi-x');
-          navicon.classList.add('bi-list');
-        }else{
-          //on open menu
-          nav.classList.add('show-menu');
-          navicon.classList.add('bi-x');
-          navicon.classList.remove('bi-list');
-        }
-        
-      }
+        let body = document.querySelector('body');
+        nav.classList.toggle('show-menu')
+        navicon.classList.toggle('bi-list');
+        navicon.classList.toggle('bi-x');
+        body.classList.toggle('stop-scroll')
+  }
+    
+
+
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
@@ -28,31 +25,32 @@ function Navbar() {
             <a className="navbar-brand" href="#">
                 <Image src={logoImg} alt="logo" />
             </a>
-            <button id="navbar-toggler" className="navbar-toggler" type="button" onClick={collapse} aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="navbar-toggler" className="navbar-toggler navbar-toggler-button" type="button" onClick={toggleNavBar} aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" className="bi bi-list"></i>
             </button>
             <div className=" navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="navbar-nav">
-                <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <li className="nav-item"  >
+                    <a className="nav-link active"
+                    aria-current="page" href="#section-home">Home</a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Services</a>
+                    <a className="nav-link" href="#section-service">Services</a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Testimonials</a>
+                    <a className="nav-link" href="#section-testimonial">Testimonials</a>
                 </li>
 
                 <li className="nav-item">
-                    <a className="nav-link ">Faq</a>
+                    <a className="nav-link " href='#section-faq'>Faq</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Portfolio</a>
+                    <a className="nav-link" href="#section-portfolio" >Portfolio</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link ">Contact</a>
+                    <a className="nav-link " href='#section-contact'>Contact</a>
                 </li>
                 </ul>
                 <button type="button" className="rounded-pill call-btn">+959 696369146
@@ -63,7 +61,7 @@ function Navbar() {
             </div>
             </div>
         </nav>
-        <MobileNavBar/>
+        <MobileNavBar toggleNavBar={toggleNavBar} />
     </>
   )
 }
