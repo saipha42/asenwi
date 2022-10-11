@@ -1,31 +1,20 @@
 import Image from 'next/image'
 import React from 'react'
-import  IntroImage from 'public/images/arts/intro.png';
-import Script from 'next/script';
-import 'glightbox/dist/css/glightbox.min.css';
+import  IntroImage from 'public/images/arts/intro.svg';
+
 
 function Intro() {
     
   return (
 <section className="intro-section" id='section-home'>
-<Script 
-    src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"
-    onReady={()=>{
-        GLightbox({
-            'href': 'https://youtu.be/eQIbuDVXZHA',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-        })
-    }}
-/>   
+  
   <div className="container">
     <div className="row align-items-center text-white">
       <div className="col-md-6 intros">
         <h1 className="display-2">
-          <span className="display-2--intro">Hey! I am Sai Marn Pha</span>
+          <span className="display-2--intro">Welcome to Asenwi</span>
           <span className="display-2--desc lh-base">
-            this is a multi-purpose responsive layout created with bootstrap v5. (here your can place your description text)
+          Lorem ipsum dolor sit amet consectetur architecto magni, dicta maxime laborum temporibus dolorem 
           </span>
         </h1>
         <button type="button"  className="rounded-pill call-btn">Get in touch
@@ -37,13 +26,6 @@ function Intro() {
       <div className="col-md-6 intros text-end">
         <div className="video-box">
           <Image src={IntroImage}  className="img-fluid" alt="Art svg" />
-          <a href="#"  className="glightbox position-absolute top-50 start-50 translate-middle">
-            <span>
-              <i className="fas fa-play-circle"></i>
-            </span>
-            <span className="border-animation pulse-1"></span>
-            <span className="border-animation pulse-2"></span>
-          </a>
         </div>
       </div>
     </div>

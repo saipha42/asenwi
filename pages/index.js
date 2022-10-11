@@ -13,8 +13,8 @@ export default function Home({testimos}) {
   return (
     <>
     <Head>
-      <title>Sai Marn Pha portfolio</title>
-      <meta name="description" content="Sai Marn Pha, Software Engineering" />
+      <title>Asenwi Landing Page</title>
+      <meta name="description" content="Asenwi company" />
     </Head>
     <Intro/>
     <Company/>

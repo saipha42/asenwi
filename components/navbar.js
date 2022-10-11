@@ -5,35 +5,12 @@ import MobileNavBar from './mobileNavbar';
 
 function Navbar() {
 
-
-    // useEffect(()=>{
-    //     var nav=  document.getElementById('mobile-nav');
-    //     let navicon = document.getElementById('navbar-toggler-icon');
-        
-    //     const togglerNavs = document.querySelectorAll('.nav-link-mobile-toggler');
-
-    //     function toggleNavBar(){
-    //         nav.classList.toggle('show-menu')
-    //         navicon.classList.toggle('bi-list');
-    //         navicon.classList.toggle('bi-x');
-            
-    //     }
-    //     togglerNavs.forEach((toggleNav)=>{
-    //         toggleNav.addEventListener('click',()=>{
-    //             toggleNavBar();
-    //         })
-    //     })
-    // },[])
-
-    
-
-
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
             <div className="container">
             <a className="navbar-brand" href="#">
-                <Image src={logoImg} alt="logo" />
+                <span className='logo'>Asenwi</span>
             </a>
             <button id="navbar-toggler"  data-bs-toggle="collapse"  data-bs-target="#navbarNav" className="navbar-toggler navbar-toggler-button nav-link-mobile-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i id="navbar-toggler-icon" className="bi bi-list"></i>
